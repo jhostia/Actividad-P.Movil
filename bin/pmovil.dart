@@ -9,7 +9,7 @@ Future<List<User>> fetchUsers() async{
     List<dynamic> data = json.decode(response.body);
     return data.map((json) => User.fromJson(json)).toList();
   } else {
-    throw Exception('Failed to load users');
+    throw Exception('Error para cargar usuarios...');
   }
 }
 
